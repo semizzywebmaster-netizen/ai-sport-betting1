@@ -1,0 +1,28 @@
+{
+    "name": "punter-prediction-laravel",
+    "version": "1.0.0",
+    "private": true,
+    "description": "Punter Prediction - Laravel 11 + Livewire 3 + Tailwind 3.4 + Alpine 3 + Vite 5 - cPanel Compatible",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview",
+        "lint": "eslint resources/js --ext .js,.ts",
+        "typecheck": "tsc --noEmit"
+    },
+    "devDependencies": {
+        "@tailwindcss/forms": "^0.5.7",
+        "@tailwindcss/typography": "^0.5.10",
+        "alpinejs": "^3.14.0",
+        "autoprefixer": "^10.4.19",
+        "axios": "^1.7.2",
+        "laravel-vite-plugin": "^1.0",
+        "postcss": "^8.4.38",
+        "tailwindcss": "^3.4.3",
+        "vite": "^5.2.8"
+    },
+    "dependencies": {
+        "date-fns": "^3.6.0"
+    }
+}

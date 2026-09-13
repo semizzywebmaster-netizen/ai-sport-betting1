@@ -1,50 +1,54 @@
-# Dependencies
-node_modules
-.pnp
-.pnp.js
+# Laravel 11 - cPanel Compatible - Trending Stack
+/vendor
+/node_modules
 
-# Build outputs
-dist
-build
-.next
-out
-.turbo
-
-# Environment
+# Laravel
 .env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+.env.backup
 .env.production
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+auth.json
+npm-debug.log
+yarn-error.log
 
-# Logs
-logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+# Storage & Cache - Laravel 11
+/storage/*.key
+/storage/app/public
+/storage/framework/cache
+/storage/framework/sessions
+/storage/framework/views
+/storage/logs
+/bootstrap/cache
+/storage/debugbar
 
-# Prisma
-prisma/migrations/
+# Frontend - Vite 5 + Tailwind 3.4
+/public/build
+/public/hot
+/public/storage
 
 # IDE
-.vscode
 .idea
+.vscode
 *.swp
 *.swo
-.DS_Store
+*~
 
 # OS
+.DS_Store
 Thumbs.db
 
-# Testing
-coverage
+# cPanel
+.cpanel
+.htaccess.cache
 
-# Cache
-.cache
-.parcel-cache
-.eslintcache
+# Old builds - cleared per user request
+/backend
+/frontend
+/laravel-old
+/docs-old
+/punter-prediction.zip
 
-# Misc
-*.tsbuildinfo
+# Logs
+*.log

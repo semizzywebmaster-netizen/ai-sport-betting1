@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --primary: #16a34a;
+    --primary-foreground: #ffffff;
+}
+
+body {
+    @apply bg-gray-50 text-gray-900 font-sans antialiased;
+}
+
+.gradient-brand {
+    background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+}
+
+.gradient-sport {
+    background: linear-gradient(135deg, #16a34a 0%, #ea580c 100%);
+}
+
+.card-hover {
+    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+}
+
+.glass {
+    @apply bg-white/80 backdrop-blur-md border border-white/20;
+}
+
+.shimmer {
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+/* Livewire loading */
+[wire\:loading] {
+    @apply opacity-50;
+}
+
+/* Alpine cloak */
+[x-cloak] { display: none !important; }
+
+/* Responsible betting */
+.betting-warning {
+    @apply bg-amber-50 border border-amber-200 text-amber-900 rounded-xl p-4;
+}
