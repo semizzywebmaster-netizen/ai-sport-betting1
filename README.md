@@ -353,3 +353,55 @@ All Blade templates + addons include: "Analytical estimates based on AI analysis
 - **GitHub:** https://github.com/semizzywebmaster-netizen/ai-sport-betting1 (addon architecture - modular)
 
 **Stack:** Laravel 11 + Livewire 3 + Tailwind 3.4 + Alpine 3 + Vite 5 + MySQL + Sanctum + Paystack/Flutterwave PHP SDK + Addon Architecture - Trending 2026 for cPanel - Future Features as Addons Without Touching Core
+
+---
+
+## 📖 cPanel Setup - Quick Start
+
+**Full Guide:** `docs/CPANEL_SETUP_GUIDE.md` (549 lines - step by step for beginners)
+
+### Quick Setup (cPanel Terminal)
+
+```bash
+# 1. Create MySQL DB in cPanel → MySQL Databases
+
+# 2. Clone (old files already cleared on GitHub)
+cd ~/public_html
+git clone https://github.com/semizzywebmaster-netizen/ai-sport-betting1.git .
+
+# 3. Install
+composer install --no-dev --optimize-autoloader
+npm install && npm run build
+
+# 4. Configure .env
+cp .env.example .env
+nano .env # DB_HOST=localhost, DB_DATABASE, DB_USERNAME, DB_PASSWORD, APP_URL=https
+
+# 5. Laravel setup
+php artisan key:generate
+php artisan migrate --force
+php artisan storage:link
+php artisan config:cache && php artisan route:cache && php artisan view:cache
+
+# 6. cPanel → Domains → Document Root → public_html/public
+
+# 7. cPanel → Cron Jobs → * * * * * cd /home/username/public_html && php artisan schedule:run >> /dev/null 2>&1
+
+# 8. Verify
+# Visit /health - should show 14 addons, Laravel 11 + Addon Architecture
+# Visit / - home
+# Visit /admin/addons - addon manager
+```
+
+### Or Use Setup Script
+
+```bash
+cd ~/public_html
+chmod +x scripts/cpanel-setup.sh
+./scripts/cpanel-setup.sh
+```
+
+**Full Guide:** See `docs/CPANEL_SETUP_GUIDE.md` for Method 1 Git Clone + Method 2 FTP + Troubleshooting + Security Checklist
+
+**Addon System:** See `docs/ADDON_ARCHITECTURE.md` - how to add future features as addons without touching core
+
