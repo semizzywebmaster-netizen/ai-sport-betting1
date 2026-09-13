@@ -1,0 +1,5 @@
+[user]
+	email = dev@punterprediction.com
+	name = Punter Prediction
+[init]
+	defaultBranch = main

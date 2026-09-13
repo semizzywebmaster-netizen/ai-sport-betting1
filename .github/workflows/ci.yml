@@ -1,0 +1,60 @@
+name: CI - Punter Prediction
+
+on:
+  push:
+    branches: [ main, master, develop ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      - name: Install Backend
+        working-directory: ./backend
+        run: npm install
+      - name: Typecheck Backend
+        working-directory: ./backend
+        run: npm run typecheck
+      - name: Build Backend
+        working-directory: ./backend
+        run: npm run build
+      - name: Prisma Validate
+        working-directory: ./backend
+        run: npx prisma validate
+
+  frontend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      - name: Install Frontend
+        working-directory: ./frontend
+        run: npm install
+      - name: Typecheck Frontend
+        working-directory: ./frontend
+        run: npm run typecheck
+      - name: Build Frontend
+        working-directory: ./frontend
+        run: npm run build
+        env:
+          NEXT_PUBLIC_API_URL: https://api.punterprediction.com/api/v1
+
+  security:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check for secrets in frontend
+        run: |
+          ! grep -r "sk_live\|sk_test\|FLWSECK\|PRIVATE_KEY" frontend/app frontend/components --include="*.ts" --include="*.tsx" || (echo "Secrets found in frontend!" && exit 1)
+          echo "No secrets in frontend - PASS"
+      - name: Check for guaranteed win language
+        run: |
+          ! grep -r "guaranteed win\|100% sure" --include="*.ts" --include="*.tsx" backend/src frontend/app | grep -v "NOT\|never\|No\|responsible" || echo "Warning: Check responsible betting language"
+          echo "Responsible betting check done"
