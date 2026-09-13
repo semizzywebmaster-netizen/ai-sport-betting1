@@ -1,0 +1,11 @@
+{
+    "name": "Payments",
+    "slug": "payments",
+    "version": "1.0.0",
+    "description": "Payments addon - Modular - Future features as addons without touching core - cPanel compatible",
+    "enabled": true,
+    "provider": "Addons\\Payments\\Providers\\AddonServiceProvider",
+    "dependencies": ["core"],
+    "category": "feature",
+    "future_addons": ["Add new Payments features as separate addon without core change"]
+}

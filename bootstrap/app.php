@@ -3,6 +3,7 @@
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
+use App\Addons\AddonManager;
 
 return Application::configure(basePath: dirname(__DIR__))
     ->withRouting(
@@ -20,4 +21,8 @@ return Application::configure(basePath: dirname(__DIR__))
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //
-    })->create();
+    })
+    ->withProviders([
+        // Addon providers will be auto-registered via AddonManager in AppServiceProvider
+    ])
+    ->create();

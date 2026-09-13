@@ -1,0 +1,11 @@
+{
+    "name": "Referrals",
+    "slug": "referrals",
+    "version": "1.0.0",
+    "description": "Referrals addon - Modular - Future features as addons without touching core - cPanel compatible",
+    "enabled": true,
+    "provider": "Addons\\Referrals\\Providers\\AddonServiceProvider",
+    "dependencies": ["core"],
+    "category": "feature",
+    "future_addons": ["Add new Referrals features as separate addon without core change"]
+}

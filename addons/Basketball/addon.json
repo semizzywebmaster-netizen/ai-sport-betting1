@@ -1,0 +1,15 @@
+{
+    "name": "Basketball",
+    "slug": "basketball",
+    "version": "1.0.0",
+    "description": "Basketball sport addon - Equal first-class as Football - NBA, EuroLeague - Livewire 3 - Future: more leagues as config addon",
+    "enabled": true,
+    "is_core": false,
+    "provider": "Addons\\Basketball\\Providers\\AddonServiceProvider",
+    "dependencies": ["core"],
+    "category": "sports",
+    "icon": "🏀",
+    "color": "orange",
+    "features": ["leagues", "games", "teams", "odds", "equal-treatment"],
+    "equality_note": "Same AI engine, same features as Football - not second-class"
+}

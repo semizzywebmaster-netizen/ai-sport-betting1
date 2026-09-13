@@ -1,0 +1,11 @@
+{
+    "name": "Subscriptions",
+    "slug": "subscriptions",
+    "version": "1.0.0",
+    "description": "Subscriptions addon - Modular - Future features as addons without touching core - cPanel compatible",
+    "enabled": true,
+    "provider": "Addons\\Subscriptions\\Providers\\AddonServiceProvider",
+    "dependencies": ["core"],
+    "category": "feature",
+    "future_addons": ["Add new Subscriptions features as separate addon without core change"]
+}

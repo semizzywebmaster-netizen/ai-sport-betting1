@@ -1,0 +1,11 @@
+{
+    "name": "WhatsApp",
+    "slug": "whatsapp",
+    "version": "1.0.0",
+    "description": "WhatsApp addon - Modular - Future features as addons without touching core - cPanel compatible",
+    "enabled": true,
+    "provider": "Addons\\WhatsApp\\Providers\\AddonServiceProvider",
+    "dependencies": ["core"],
+    "category": "feature",
+    "future_addons": ["Add new WhatsApp features as separate addon without core change"]
+}

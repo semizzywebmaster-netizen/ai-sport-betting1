@@ -1,0 +1,16 @@
+{
+    "name": "Core",
+    "slug": "core",
+    "version": "1.0.0",
+    "description": "Core system - Laravel 11 + Livewire 3 + Tailwind 3.4 + Alpine 3 + Vite 5 - cPanel PHP Native - Required",
+    "enabled": true,
+    "is_core": true,
+    "provider": "Addons\\Core\\Providers\\AddonServiceProvider",
+    "dependencies": [],
+    "author": "Punter Prediction",
+    "requires": {
+        "php": "^8.2",
+        "laravel": "^11.0"
+    },
+    "features": ["auth", "base", "layouts", "health"]
+}

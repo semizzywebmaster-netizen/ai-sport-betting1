@@ -1,0 +1,20 @@
+{
+    "name": "Football",
+    "slug": "football",
+    "version": "1.0.0",
+    "description": "Football sport addon - Dynamic leagues, fixtures, teams, odds, Livewire 3 - Equal first-class - Future addons: more leagues as addon config",
+    "enabled": true,
+    "is_core": false,
+    "provider": "Addons\\Football\\Providers\\AddonServiceProvider",
+    "dependencies": ["core"],
+    "author": "Punter Prediction",
+    "category": "sports",
+    "icon": "⚽",
+    "color": "green",
+    "features": ["leagues", "fixtures", "teams", "odds", "livewire-search"],
+    "future_addons": [
+        "Add more leagues via config without code change",
+        "Custom football markets as addon",
+        "Football-specific AI models as addon"
+    ]
+}

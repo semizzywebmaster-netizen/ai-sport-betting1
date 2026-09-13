@@ -1,0 +1,17 @@
+{
+    "name": "AI Predictions",
+    "slug": "ai-predictions",
+    "version": "1.0.0",
+    "description": "AI Predictions addon - OpenAI, Anthropic, Groq with fallback - Confidence, risk, reasoning - Future: new AI providers as addons",
+    "enabled": true,
+    "provider": "Addons\\AIPredictions\\Providers\\AddonServiceProvider",
+    "dependencies": ["core", "football", "basketball"],
+    "category": "ai",
+    "icon": "🤖",
+    "features": ["confidence", "risk", "reasoning", "fallback", "no-guarantees"],
+    "future_addons": [
+        "New AI provider: addons/AIAnthropic, addons/AIGroq, addons/AIGemini",
+        "Custom AI models: addons/AIFootballModel, addons/AIBasketballModel",
+        "AI accuracy tracking: addons/AIAccuracy"
+    ]
+}

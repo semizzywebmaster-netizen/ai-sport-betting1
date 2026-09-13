@@ -1,0 +1,11 @@
+{
+    "name": "Wallet",
+    "slug": "wallet",
+    "version": "1.0.0",
+    "description": "Wallet addon - Modular - Future features as addons without touching core - cPanel compatible",
+    "enabled": true,
+    "provider": "Addons\\Wallet\\Providers\\AddonServiceProvider",
+    "dependencies": ["core"],
+    "category": "feature",
+    "future_addons": ["Add new Wallet features as separate addon without core change"]
+}

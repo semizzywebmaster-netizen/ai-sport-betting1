@@ -1,0 +1,11 @@
+{
+    "name": "Analytics",
+    "slug": "analytics",
+    "version": "1.0.0",
+    "description": "Analytics addon - Modular - Future features as addons without touching core - cPanel compatible",
+    "enabled": true,
+    "provider": "Addons\\Analytics\\Providers\\AddonServiceProvider",
+    "dependencies": ["core"],
+    "category": "feature",
+    "future_addons": ["Add new Analytics features as separate addon without core change"]
+}

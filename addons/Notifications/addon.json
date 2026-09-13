@@ -1,0 +1,11 @@
+{
+    "name": "Notifications",
+    "slug": "notifications",
+    "version": "1.0.0",
+    "description": "Notifications addon - Modular - Future features as addons without touching core - cPanel compatible",
+    "enabled": true,
+    "provider": "Addons\\Notifications\\Providers\\AddonServiceProvider",
+    "dependencies": ["core"],
+    "category": "feature",
+    "future_addons": ["Add new Notifications features as separate addon without core change"]
+}

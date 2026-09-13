@@ -1,0 +1,11 @@
+{
+    "name": "Community",
+    "slug": "community",
+    "version": "1.0.0",
+    "description": "Community addon - Modular - Future features as addons without touching core - cPanel compatible",
+    "enabled": true,
+    "provider": "Addons\\Community\\Providers\\AddonServiceProvider",
+    "dependencies": ["core"],
+    "category": "feature",
+    "future_addons": ["Add new Community features as separate addon without core change"]
+}
